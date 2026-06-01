@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+@tailwind utilities;
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../setup/assets/font/IRANSansWeb_Bold.eot');
+    src:
+        url('../setup/assets/font/IRANSansWeb_Bold.eot') format('mbedded-opentype'),
+        url('../setup/assets/font/IRANSansWeb_Bold.woff') format('woff'),
+        url('../setup/assets/font/IRANSansWeb_Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../setup/assets/font/IRANSansWeb_Medium.eot');
+    src:
+        url('../setup/assets/font/IRANSansWeb_Medium.eot') format('mbedded-opentype'),
+        url('../setup/assets/font/IRANSansWeb_Medium.woff') format('woff'),
+        url('../setup/assets/font/IRANSansWeb_Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../setup/assets/font/IRANSansWeb.eot');
+    src:
+        url('../setup/assets/font/IRANSansWeb.eot') format('mbedded-opentype'),
+        url('../setup/assets/font/IRANSansWeb.woff') format('woff'),
+        url('../setup/assets/font/IRANSansWeb.woff2') format('woff2');
+}
+body {
+    background: var(--background);
+}
+
+* {
+    font-family: 'IRANSans' !important;
+}
+
+:root {
+    --background: 249 249 249;
+    --surface: 255 255 255;
+    --text: 51 51 51;
+    --muted: 102 102 102;
+
+    --primary: 67 56 202;
+    --secondary: 20 184 166;
+    --accent: 255 223 32;
+}
+
+.dark {
+    --background: 20 18 32;
+    --surface: 30 28 48;
+    --text: 235 235 235;
+    --muted: 160 160 160;
+
+    --primary: 99 102 241;
+    --secondary: 45 212 191;
+    --accent: 255 223 32;
+}
+
+a {
+    text-decoration: none;
+}
