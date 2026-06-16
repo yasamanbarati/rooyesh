@@ -3,8 +3,8 @@ export interface CourseProps {
     title: string;
     category: string;
     rating: number;
-    duration: string; // مثلاً "۵۶ ساعت"
-    price: number; // قیمت فعلی به تومان
+    duration: number; // مثلاً "۵۶ ساعت"
+    discount?: number; // درصد تخفیف
     originalPrice?: number; // قیمت اصلی (در صورت تخفیف)
     instructor: {
         name: string;

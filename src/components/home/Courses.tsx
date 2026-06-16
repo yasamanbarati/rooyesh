@@ -1,9 +1,9 @@
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Star, ShoppingBag, ArrowRight, Clock } from 'lucide-react';
-import { CustomButton } from '../ui/button';
 import Link from 'next/link';
-import { coursesData } from '@/services/servers/mock';
 import Image from 'next/image';
+import { Star, ShoppingBag, ArrowRight, Clock } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { CustomButton } from '../ui/button';
+import { coursesData } from '@/services/servers/mock';
 const formatPrice = (price: number) => {
     return price.toLocaleString('fa-IR') + ' تومان';
 };
@@ -66,7 +66,7 @@ export default function Courses() {
                                     </div>
                                     <span className="flex items-center gap-1 rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
                                         <Clock className="h-3 w-3" />
-                                        {course.duration}
+                                        {course.duration} ساعت
                                     </span>
                                 </div>
 
@@ -94,18 +94,30 @@ export default function Courses() {
                                     {/* قیمت و دکمه خرید */}
                                     <div className="flex items-center justify-between border-t border-gray-100 pt-4">
                                         <div className="flex flex-col">
-                                            {course.originalPrice && (
-                                                <span className="text-xs text-gray-400 line-through decoration-red-400">
-                                                    {formatPrice(course.originalPrice)}
+                                            {typeof course.originalPrice === 'number' &&
+                                                typeof course.discount === 'number' && (
+                                                    <span className="text-xs text-gray-400 line-through decoration-red-400">
+                                                        {formatPrice(course.originalPrice)}
+                                                    </span>
+                                                )}
+                                            {typeof course.originalPrice === 'number' && (
+                                                <span className="text-lg font-black text-indigo-700">
+                                                    {formatPrice(
+                                                        typeof course.discount === 'number'
+                                                            ? Math.round(
+                                                                  course.originalPrice -
+                                                                      (course.originalPrice *
+                                                                          course.discount) /
+                                                                          100
+                                                              )
+                                                            : course.originalPrice
+                                                    )}
                                                 </span>
                                             )}
-                                            <span className="text-lg font-black text-indigo-700">
-                                                {formatPrice(course.price)}
-                                            </span>
                                         </div>
                                         <CustomButton
                                             size="icon"
-                                            className="bg-indigo-700 text-white shadow-lg shadow-indigo-700/20 hover:scale-110"
+                                            className="bg-indigo-700 text-white shadow-lg shadow-indigo-700/20 hover:scale-110 justify-items-center"
                                             aria-label="افزودن به سبد خرید"
                                         >
                                             <ShoppingBag className="h-4 w-4" />

@@ -7,8 +7,8 @@ export const coursesData: CourseProps[] = [
         title: 'آموزش جامع پایتون برای هوش مصنوعی',
         category: 'برنامه‌نویسی',
         rating: 4.8,
-        duration: '۵۶ ساعت',
-        price: 1250000,
+        duration: 56,
+        discount: 50,
         originalPrice: 2500000,
         instructor: {
             name: 'مهندس رضایی',
@@ -23,8 +23,8 @@ export const coursesData: CourseProps[] = [
         title: 'استاد اینستاگرام و استراتژی محتوا',
         category: 'مارکتینگ',
         rating: 4.9,
-        duration: '۳۲ ساعت',
-        price: 950000,
+        duration: 32,
+        discount: 50,
         originalPrice: 1800000,
         instructor: {
             name: 'سارا محمدی',
@@ -39,9 +39,8 @@ export const coursesData: CourseProps[] = [
         title: 'طراحی رابط کاربری (UI/UX) پیشرفته',
         category: 'طراحی',
         rating: 4.7,
-        duration: '۴۵ ساعت',
-        price: 3000000,
-        originalPrice: undefined, // بدون تخفیف
+        duration: 45,
+        originalPrice: 3000000, // بدون تخفیف
         instructor: {
             name: 'امید کیانی',
             avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDXpiphJ9vPaxyxeYBdqxEsQr3nTsFGBSzVh2-BMi1AKW1WNWYHVOQUGoKA0H-WLDSTAeAAbf4vVgkiix3WQGboPj_jP0el37WBFh2ZVhNTF8EkyEEqtcBKW_BXefZL-6gKnuTMJ3qfudL1Ro91vbnCM4tlTGAMq9OVkthLBaaHwdZdVE5YIsO-GV1vQO4Qxh95JLbb8aOAxirwP8uIFdKp_cmEazCELrEbiyquZIurVGXA2CB----JdfG-VvezQk6s4Qhvg24-Mb_Y',
@@ -55,8 +54,8 @@ export const coursesData: CourseProps[] = [
         title: 'مدیریت محصول: از ایده تا اجرا',
         category: 'مدیریت',
         rating: 5.0,
-        duration: '۲۸ ساعت',
-        price: 3800000,
+        duration: 28,
+        discount: 20,
         originalPrice: 4200000,
         instructor: {
             name: 'لیلا احمدی',
@@ -74,10 +73,10 @@ export const featuresData: Feature[] = [
         description: 'امکان پرسش و پاسخ زنده، اشتراک‌گذاری صفحه و تعامل مستقیم با اساتید.',
         icon: MonitorPlay,
         iconBgColor: 'bg-white',
-        iconTextColor: 'text-primary',
-        hoverBgColor: 'group-hover:bg-primary',
+        iconTextColor: 'text-indigo-700',
+        hoverBgColor: 'group-hover:bg-indigo-700',
         hoverTextColor: 'group-hover:text-white',
-        borderHoverColor: 'hover:border-primary/10',
+        borderHoverColor: 'hover:border-indigo-700/10',
     },
     {
         id: 2,
@@ -85,10 +84,10 @@ export const featuresData: Feature[] = [
         description: 'دریافت مدرک پایان دوره با قابلیت استعلام آنلاین و افزودن به رزومه شغلی.',
         icon: Award,
         iconBgColor: 'bg-white',
-        iconTextColor: 'text-secondary',
-        hoverBgColor: 'group-hover:bg-secondary',
+        iconTextColor: 'text-teal-500',
+        hoverBgColor: 'group-hover:bg-teal-500',
         hoverTextColor: 'group-hover:text-white',
-        borderHoverColor: 'hover:border-secondary/20',
+        borderHoverColor: 'hover:border-teal-500/20',
     },
     {
         id: 3,
@@ -97,9 +96,9 @@ export const featuresData: Feature[] = [
         icon: Infinity,
         iconBgColor: 'bg-white',
         iconTextColor: 'text-yellow-500',
-        hoverBgColor: 'group-hover:bg-accent',
+        hoverBgColor: 'group-hover:bg-yellow-500',
         hoverTextColor: 'group-hover:text-gray-800',
-        borderHoverColor: 'hover:border-accent/50',
+        borderHoverColor: 'hover:border-yellow-500/50',
     },
 ];
 
